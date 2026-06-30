@@ -1,0 +1,310 @@
+/* ==========================================================================
+   ESTILO DEFINITIVO: LAYOUT CLEAN NOLAE + PALETA DE CORES DA BIANCA
+   ========================================================================== */
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1A0E3E; /* Seu roxo/azul super escuro de fundo */
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+/* SEÇÃO 1: MENU SUPERIOR (Alinhado com o fundo) */
+.menu-container {
+    background-color: #1F1A70; /* Seu azul escuro secundário */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    border-bottom: 2px solid #DB488B; /* Detalhe com seu Rosa Escuro */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #FF83F6; /* Seu Rosa Chiclete vibrante */
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #3ED0EB; /* Seu Azul Claro vibrante */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #FF83F6; /* Muda para rosa ao passar o mouse */
+}
+
+/* SEÇÃO 2: SOBRE (Layout minimalista escuro) */
+.sobre-section {
+    padding: 90px 8%;
+    background: linear-gradient(180deg, #1A0E3E 0%, #1F1A70 100%);
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h1 {
+    font-size: 2.6rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.sobre-texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #e0dcf5;
+}
+
+.sobre-foto img {
+    width: 360px;
+    height: 360px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #3ED0EB; /* Borda no seu Azul Claro */
+    box-shadow: 0 8px 30px rgba(62, 208, 235, 0.2);
+}
+
+/* SEÇÃO 3: O BLOG (Cards Nolae com bordas acesas) */
+.blog-section {
+    padding: 100px 8%;
+    background-color: #1A0E3E;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title-container h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    background-color: #1F1A70; /* Blocos no azul escuro */
+    padding: 35px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(255, 131, 246, 0.15);
+    border-color: #FF83F6; /* Acende no seu Rosa Chiclete */
+}
+
+.post-tag {
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* CORES DA PALETA NAS TAGS */
+.roxo .post-tag { background-color: rgba(255, 131, 246, 0.15); color: #FF83F6; }
+.azul .post-tag { background-color: rgba(62, 208, 235, 0.15); color: #3ED0EB; }
+
+.post-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.post-resumo {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #c4bedb;
+}
+
+/* SEÇÃO 4: FAVORITOS (Colunas com Listas Harmonizadas) */
+.favoritos-section {
+    padding: 100px 8%;
+    background-color: #1F1A70;
+    text-align: center;
+}
+
+.favoritos-section h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.favoritos-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.coluna-lista {
+    background-color: #1A0E3E;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1;
+    min-width: 290px;
+    max-width: 460px;
+    text-align: left;
+}
+
+.coluna-lista h3 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    color: #3ED0EB; /* Títulos em Azul Claro */
+    font-weight: 600;
+    border-bottom: 2px solid rgba(62, 208, 235, 0.1);
+    padding-bottom: 12px;
+}
+
+.lista-customizada li {
+    font-size: 0.95rem;
+    padding: 14px 0;
+    color: #e0dcf5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lista-customizada li:last-child {
+    border-bottom: none;
+}
+
+/* SEÇÃO 5: VÍDEOS EM GRID (Alinhamento Nolae) */
+.video-section {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: #1A0E3E;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+#videos .video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#videos iframe {
+    border-radius: 12px;
+    border: 2px solid #DB488B; /* Moldura no seu Rosa Escuro */
+    background-color: #1F1A70;
+    padding: 6px;
+    width: 100%;
+}
+
+/* SEÇÃO 6: RODAPÉ */
+footer {
+    background-color: #1A0E3E;
+    padding: 60px 8% 40px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    color: #a099c2;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.redes-sociais a {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 24px;
+    border: 1px solid #DB488B;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.redes-sociais a:hover {
+    border-color: #3ED0EB;
+    color: #3ED0EB;
+    background-color: rgba(62, 208, 235, 0.05);
+}
+
+.creditos {
+    font-size: 0.85rem;
+    color: #554e75 !important;
+}
+
+/* RESPONSIVIDADE (Celular) */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .sobre-foto img {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+    }
+}
